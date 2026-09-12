@@ -1,6 +1,7 @@
 // STEP 1: Print text to the browser console is string ""
 
 console.log("Hello, World!");
+alert("Hello, World!");
 
 // STEP 2: Variables
 
