@@ -25,13 +25,26 @@ const visitorName = prompt("Mikä on nimesi?");
 // Print the user's answer
 console.log(visitorName);
 
-console.log("Terve, " + visitorName + "! Tervetuloa javascriptin pariin!");
+console.log("Hello, " + visitorName + "!");
+
+// ask the user for their age
+const visitorAge = prompt("Kuinka vanha olet?");
+
+if (visitorAge >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are under 18.");
+}
 
 // Ask the user for their favorite animal
 const visitorFavoriteAnimal = prompt("Mikä on lempieläimesi?");
 
 // Create a sentence using both answers
 console.log("Hello, " + visitorName + "! Your favorite animal is " + visitorFavoriteAnimal + ".");
+
+function viesti() {
+    alert("You found the message!");
+}
 
 // ⭐⭐ BONUS Ask the user for their favorite animal.If their favorite animal is "Blue Elephant", print: Great choice! That's my favorite animal too!
 // ⭐⭐ BONUS Otherwise, print: Nice! Your favorite animal is [animal]. Can you figure out how to do this using if / else?
