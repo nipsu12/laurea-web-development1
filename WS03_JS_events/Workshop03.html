@@ -22,46 +22,17 @@
     <p>In Exercise 2, you will learn <code>addEventListener()</code>, which is the preferred way to keep JavaScript behaviour separate from HTML.</p>
 
     <p>
-        <button>Click me</button>
-        <button>Show Animal table</button>
+        <button onclick="alert('You clicked me!')">Click me</button>
+        <button onclick="showTable()">Show Animal table</button>
     </p>
 
     <div id="tableContainer"></div>
-
-    <ol>
-        <li>The first button should open an alert window saying: “You clicked me!”.</li>
-        <li>The second button should call a function named <code>showTable()</code>, which you write to print an HTML table on the page.</li>
-        <li>Build the table using a template string (with backtick characters: <code>`</code>).</li>
-        <li>Use variables for the column content, for example <code>${animal}</code>, <code>${habitat}</code>, and <code>${diet}</code>.</li>
-        <li>When the table works, find its destination with <code>document.querySelector()</code> and add it to the element with the id <code>tableContainer</code>.</li>
-    </ol>
-
-    <table id="example" class="display">
-        <thead>
-            <tr>
-                <th>Animal</th>
-                <th>Habitat</th>
-                <th>Diet</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Tiger</td>
-                <td>Forest</td>
-                <td>Carnivore</td>
-            </tr>
-            <tr>
-                <td>Elephant</td>
-                <td>Savanna</td>
-                <td>Herbivore</td>
-            </tr>
-        </tbody>
-    </table>
 
     <hr>
 
     <!-- Exercise 2 -->
     <h2>Exercise 2: Event Listeners and DOM Manipulation</h2>
+        
     <ul>
         <li>Add a <code>mouseover</code> event to the “Exercise 2” heading. Print <em>“Stepped over me with a mouse!”</em> to the console.</li>
         <li>Dynamically add a <code>click</code> event to the “Exercise 1” heading using the <code>addEventListener()</code> method. Change the heading colour to red and its text to “Bye bye mouse!”.</li>
@@ -96,14 +67,14 @@
 
         <div style="margin: 4px 0;">
             <span id="charcount">0/200</span>
-            <span id="status" aria-live="polite" style="margin-left: 8px; color: #666;"></span>
+            <span id="status" aria-live="polite" style="margin-left: 8px; color: #5e3742;"></span>
         </div>
 
         <button id="sendBtn" type="submit">Send</button>
     </form>
 
     <h3>Preview</h3>
-    <div id="preview" style="border: 1px solid #ccc; padding: 8px; min-height: 40px; background: #fafafa;">
+    <div id="preview" style="border: 1px solid #f658ee; padding: 8px; min-height: 40px; background: #ffaefb;">
         (The preview will appear here)
     </div>
 
