@@ -68,3 +68,34 @@ textarea.addEventListener("input", function () {
     charcount.textContent = `${text.length}/200`;
     preview.textContent = text || "(The preview will appear here)";
 });
+
+//adding form submission
+const form = document.getElementById("feedbackForm");
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const text = textarea.value.trim();
+
+    if (text.length < 10 || text.length > 200) {
+        status.textContent = "Feedback must be between 10 and 200 characters.";
+        return;
+    }
+
+    status.textContent = "Thank you for your feedback!";
+    textarea.value = "";
+    charcount.textContent = "0/200";
+    preview.textContent = "(The preview will appear here)";
+    status.textContent = "Thank you for your feedback!";
+});
+
+//adding keyboard event
+const keybox = document.getElementById("keybox");
+const keyinfo = document.getElementById("keyinfo");
+
+document.addEventListener("keydown", function (event) {
+    console.log(event);
+    keyinfo.textContent = `Key: ${event.key}, Code: ${event.code}`;
+    keybox.textContent = event.key;
+    keybox.style.fontSize = "2rem";
+});
