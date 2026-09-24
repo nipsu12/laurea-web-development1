@@ -1,6 +1,6 @@
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  color: #333333;
+  color: #473131;
   margin: 20px;
 }
 .ws3 {
@@ -8,8 +8,8 @@ body {
   margin: 0 auto;
   padding: 0 28px 40px;
   box-sizing: border-box;
-  background: #f7f4ec;
-  color: #3f4034;
+  background: #f0c8ff;
+  color: #5c3a48;
   line-height: 1.6;
 }
 h1:before {
@@ -20,23 +20,23 @@ h1:before {
 }
 .ws3 h1 {
   margin-bottom: 12px;
-  color: #315c4c;
+  color: #ef43aa;
   font-size: 2em;
   font-weight: 600;
 }
 .ws3 h1::before {
   margin-bottom: 6px;
-  color: #a66a2c;
+  color: #de00b1;
   font-size: 45%;
   font-weight: 400;
   letter-spacing: 0.04em;
 }
 .ws3 h2 {
-  color: #315c4c;
+  color: #db58f2;
 }
 .ws3 hr {
   border: 0;
-  border-top: 2px solid #c9954a;
+  border-top: 2px solid #750093;
 }
 .red-box {
   background: red;
