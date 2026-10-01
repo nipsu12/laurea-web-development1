@@ -1,53 +1,60 @@
+// MUOKATAAN OTSIKKOA KUN NAPPIA PAINETAAN
+// MUOKATAAN OTSIKKOA KUN NAPPIA PAINETAAN
+
 const changeHeadingButton = document.querySelector("#changeHeadingButton");
-const changeStyleButton = document.querySelector("#changeStyleButton");
-const changeTextButton = document.querySelector("#changeTextButton");
+const taskOneHeading = document.querySelector("#taskOneHeading");
 
-const heading = document.querySelector("#taskOneHeading");
-const animalText = document.querySelector("#animalText");
-
-changeHeadingButton.addEventListener("click", () => {
-    heading.textContent = "Muokattu otsikko!";
+changeHeadingButton.addEventListener("click", function () {
+    taskOneHeading.textContent = "Muokattu otsikko!";
 });
 
-changeStyleButton.addEventListener("click", () => {
-    heading.classList.toggle("highlight");
-});
+// -------------------------------------------------- EXAMPLE 1 ANIMAL TABLE
+// -------------------------------------------------- EXAMPLE 1 ANIMAL TABLE
 
-changeTextButton.addEventListener("click", () => {
-    if (animalText.textContent === "Elefantit ovat maailman suurimpia maaeläimiä.") {
-        animalText.textContent = "Kirahvit ovat maailman pisimpiä maaeläimiä.";
-    } else {
-        animalText.textContent = "Elefantit ovat maailman suurimpia maaeläimiä.";
-    }
-});
+const animalButton = document.querySelector("#animalButton");
+const animalTable = document.querySelector("#animalTable");
 
-
-animalButton.addEventListener('click', function() {
+animalButton.addEventListener("click", function () {
     animalTable.hidden = !animalTable.hidden;
-    console.log("Nappia painettu");
+    console.log("nappia painettu!");
 
 });
 
-const animalSelect = document.querySelector('#animalSelect');
-const animalName = document.querySelector('#animalName');
-const animalImage = document.querySelector('#animalImage');
-const animalDescription = document.querySelector('#animalDescription');
+// -------------------------------------------------- EXAMPLE 3 LISTEN DROPDOWN SELECT
+// -------------------------------------------------- EXAMPLE 3 LISTEN DROPDOWN SELECT
 
-animalSelect.addEventListener('change', function() {
+const animalSelect = document.querySelector("#animalSelect");
+const animalName = document.querySelector("#animalName");
+const animalImage = document.querySelector("#animalImage");
+const animalDescription = document.querySelector("#animalDescription");
+
+// listener for the select element from the drop down list.
+
+animalSelect.addEventListener("change", function () {
     const selectedAnimal = animalSelect.value;
 
-    //function to update the dom based on the selected animal
-    
-    console.log("Selected animal: " + selectedAnimal);
+      // function to update the DOM based on the selected animal
 
-    if (selectedAnimal === "tiger") {
+      console.log("selected animal:", selectedAnimal);
+
+      if (selectedAnimal === "tiger") {
         animalName.textContent = "Tiikeri";
-        animalImage.src = "images/tiger.jpg";
+        animalImage.src = "images/tiger.png";
         animalImage.alt = "Tämä on tiikeri";
-        animalDescription.textContent = "Tiikeri on suuri kissaeläin, joka tunnetaan voimastaan ja kauneudestaan.";
+        animalDescription.textContent = "Tiikerit ovat raidallisia ja melko rauhallisia eläimiä";
 
-
-    }
-
-
+      }
 })
+
+// listener for the select element from the drop down list.
+// function to update the DOM based on the selected animal
+
+// -------------------------------------------------- EXAMPLE 4 CSS
+// -------------------------------------------------- EXAMPLE 4 CSS
+
+const heading = document.querySelector("#taskOneHeading");
+const changeStyleButton = document.querySelector("#changeStyleButton");
+
+changeStyleButton.addEventListener("click", function () {
+    heading.classList.toggle("highlight");
+});
