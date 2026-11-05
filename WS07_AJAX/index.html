@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="fi">
+<HTML lang="fi">
 
 <head>
 	<meta charset="utf-8">
 	<title>Työpaja 7</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="script.js" defer></script>
 </head>
 
 <body class="ws8">
 	<h1>Työpaja 7: JSON/XML:n parsiminen AJAXilla</h1>
-	<hr />
+	<hr>
 	<p>Tässä harjoituksessa harjoittelemme JSONin käyttöä JavaScript-sovelluksissa. Käytä luentomateriaalia rinnalla
 		viitteenä näiden tehtävien aikana.</p>
 
-	<hr />
+	<hr>
 	<h2>Harjoitus 1: JSONin perusteet</h2>
 	<p>JSON tarkoittaa JavaScript Object Notationia, ja se tarkoittaa, että esittelemme datan muodossa, jonka JavaScript
 		ymmärtää sellaisenaan. Muunnoksia ei tarvita sen käyttämiseen.</p>
 	<p>
-		<button>Näytä vain etu- ja sukunimi</button>
-		<button>Näytä kaikki tiedot</button>
+		<button id="btnNames">Näytä vain etu- ja sukunimi</button>
+		<button id="btnAll">Näytä kaikki tiedot</button>
 	</p>
 	<p>Kokeillaan seuraavaa. Voit luoda uuden JSON-datasetin JavaScript-koodissasi alla olevan mallin mukaisesti. Luo
 		sitten funktiot, jotka suoritetaan, kun painikkeita klikataan.</p>
@@ -37,13 +38,13 @@
 			for-silmukoita tässä.</li>
 	</ul>
 	<div id="jsondata">JSON-data näkyy täällä.</div>
-	<hr />
+	<hr>
 	<h2>Harjoitus 2: JSONin parsiminen verkosta</h2>
 	<p>Alla näet kaksi painiketta. Muokkaa lähdekoodia ja lisää näihin painikkeisiin onClick-tapahtumat. Lisää
 		toiminnallisuudet alla kuvatulla tavalla.</p>
 	<p>
-		<button>Lataa raaka data</button>
-		<button>Lataa ja parsi data</button>
+		<button id="btnRawOmdb">Lataa raaka data</button>
+		<button id="btnParsedOmdb">Lataa ja parsi data</button>
 	</p>
 
 	<ul>
@@ -57,7 +58,7 @@
 	</ul>
 	<div id="rawdata">Raaka data näkyy täällä.</div>
 
-	<hr />
+	<hr>
 	<h2>Harjoitus 3: Käytännön haaste: OpenWeatherMap API</h2>
 
 	<p>OpenWeatherMap on tunnettu säädatan tarjoaja verkossa. Se tarjoaa API:n, jonka avulla kehittäjät voivat hakea
@@ -70,7 +71,7 @@
 		Klikkaa nähdäksesi vastauksen.</p>
 	<ul>
 		<li>Kehitä ensin sovellus, joka näyttää raakatiedot säästä (lämpötila, pilvisyys, ilmankosteus) tietyssä
-			kaupungissa, kun painiketta klikataan. <button>Hae data</button></li>
+			kaupungissa, kun painiketta klikataan. <button id="fetchWeather">Hae data</button></li>
 		<li>Kun tämä toimii, parsi data ja tulosta se diviin.</li>
 		<li>Tämän jälkeen lisää onchange-tapahtuma pudotusvalikkoon, jotta käyttäjä voi valita, minkä kaupungin tiedot
 			näytetään listalta.</li>
@@ -78,13 +79,13 @@
 			OpenWeatherMap API:lle ja jonka tulokset näytetään sovelluksessa.</li>
 	</ul>
 	<p>Valitse kaupunki listalta:</p>
-	<select name="mySelect" id="city" onchange="">
+	<select name="mySelect" id="city">
 		<option value="Helsinki">Helsinki</option>
 		<option value="Stockholm">Tukholma</option>
 		<option value="Rome">Rooma</option>
 		<option value="New York">New York</option>
 	</select>
-	<p>Tai kirjoita hakusana: <input id="citysearch" /><button id="search">Hae</button></p>
+	<p>Tai kirjoita hakusana: <input id="citysearch" ><button id="search">Hae</button></p>
 	<div id="weatherdata">Säätiedot näkyvät täällä.</div>
 
 </body>
